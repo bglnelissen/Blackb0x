@@ -738,7 +738,7 @@ void device_event(const irecv_device_event_t *event, void *user_data) {
         
         if(secid == event->device_info->ecid) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                view.instructions.stringValue = @"\n\n\n\nNow hold MENU and PLAY/PAUSE until Apple TV LED flashes rapidly";
+                view.instructions.stringValue = @"\n\n\nStep 2: MENU + PLAY: at rapid flash hold 3s, then release";
             });
         }
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -778,7 +778,7 @@ void idevice_event(const idevice_event_t *event, void *user_data) {
             
             if([udid isEqual:view.selected_udid]) {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    view.instructions.stringValue = @"\n\n\n\nNow hold MENU and PLAY/PAUSE until Apple TV LED flashes rapidly";
+                    view.instructions.stringValue = @"\n\n\nStep 2: MENU + PLAY: at rapid flash hold 3s, then release";
                 });
             }
             
@@ -1123,12 +1123,12 @@ void newDevice(char *productType, char *modeStr, char *version, char *buildID, u
             }
         }
         else {
-            view.instructions.stringValue = @"\n\nTry again \n\n\nHold DOWN and MENU button until Apple TV LED flashes rapidly";
+            view.instructions.stringValue = @"\n\nTry again\n\n1. MENU + DOWN: at rapid flash hold 3s, release\n2. MENU + PLAY: at rapid flash hold 3s, release";
         }
     }
     
     if([icon.udid isEqual:view.selected_udid]) {
-        view.instructions.stringValue = @"\n\nTry again \n\n\nHold DOWN and MENU button until Apple TV LED flashes rapidly";
+        view.instructions.stringValue = @"\n\nTry again\n\n1. MENU + DOWN: at rapid flash hold 3s, release\n2. MENU + PLAY: at rapid flash hold 3s, release";
     }
 }
 

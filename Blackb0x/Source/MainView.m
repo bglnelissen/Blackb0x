@@ -120,7 +120,7 @@
         NSRect instructionsFrame = NSMakeRect(popupSize.width / 3, popupSize.height / 3, instructionsWidth, popupSize.height / 2);
         
         _instructions = [[NSTextField alloc] initWithFrame:instructionsFrame];
-        _instructions.stringValue = @"\n\nTo enter DFU mode \n\n\nHold DOWN and MENU button until Apple TV LED flashes rapidly";
+        _instructions.stringValue = @"\n\nEnter DFU mode\n\n1. MENU + DOWN: at rapid flash hold 3s, release\n2. MENU + PLAY: at rapid flash hold 3s, release";
         _instructions.backgroundColor = [NSColor clearColor];
         _instructions.usesSingleLineMode = NO;
         _instructions.bordered = NO;
@@ -521,7 +521,7 @@ NSComboBox *comboBox;
             printf("Failed to send iBSS, spawning dfu helper\n");
             dispatch_async(dispatch_get_main_queue(), ^(void){
                 [self spawnDFUHelper];
-                self.instructions.stringValue = @"\n\nPlease re-enter DFU mode \n\n\nHold DOWN and MENU button until Apple TV LED flashes rapidly";
+                self.instructions.stringValue = @"\n\nRe-enter DFU mode\n\n1. MENU + DOWN: at rapid flash hold 3s, release\n2. MENU + PLAY: at rapid flash hold 3s, release";
             });
             return;
         }

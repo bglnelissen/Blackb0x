@@ -899,10 +899,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				ARCHS = x86_64;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -951,9 +952,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ARCHS = x86_64;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -967,10 +969,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_ENTITLEMENTS = Blackb0x/Blackb0x.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = E4V2A7WYY7;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -981,6 +985,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Blackb0x/Libraries",
 					/usr/local/include,
+					"/opt/homebrew/opt/openssl@3/include",
 				);
 				INFOPLIST_FILE = Blackb0x/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -990,7 +995,7 @@
 					/usr/local/lib,
 					"$(PROJECT_DIR)/Blackb0x/Files",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-lcrypto",
@@ -1000,6 +1005,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = spiral.Blackb0x;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				WARNING_CFLAGS = "-Wno-nullability-completeness";
 			};
 			name = Debug;
@@ -1013,10 +1019,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_ENTITLEMENTS = Blackb0x/Blackb0x.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = E4V2A7WYY7;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1027,6 +1035,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Blackb0x/Libraries",
 					/usr/local/include,
+					"/opt/homebrew/opt/openssl@3/include",
 				);
 				INFOPLIST_FILE = Blackb0x/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -1036,7 +1045,7 @@
 					/usr/local/lib,
 					"$(PROJECT_DIR)/Blackb0x/Files",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-lcrypto",
@@ -1046,6 +1055,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = spiral.Blackb0x;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				WARNING_CFLAGS = "-Wno-nullability-completeness";
 			};
 			name = Release;
